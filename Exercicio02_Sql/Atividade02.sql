@@ -47,10 +47,8 @@ select * from tb_pizzas where valor between 50.00 and 100.00;
 select * from tb_pizzas where sabor like "%m%";
 
 select * from tb_pizzas
-inner join tb_categorias on tb_pizzas.id = tb_categorias.id;
+inner join tb_categorias on tb_pizzas.categoria_id = tb_categorias.id;
 
 select sabor from tb_pizzas
-inner join tb_categorias on tb_pizzas.id= tb_categorias.id
-where tb_categorias.tipo = "Salgada"; 
-
-
+inner join tb_categorias on tb_pizzas.categoria_id = tb_categorias.id
+where tb_categorias.tipo = "Doce"; 
